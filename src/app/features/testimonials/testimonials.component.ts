@@ -191,7 +191,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 export class TestimonialsComponent implements OnDestroy {
   testimonials = [
     {
-      review: 'CodexByte completely transformed our online presence. Their Angular expertise and attention to modern design helped us increase conversions by 150% in just two months.',
+      review: 'opzmind completely transformed our online presence. Their expertise and attention to modern design helped us increase conversions by 150% in just two months.',
       name: 'Sarah Johnson',
       role: 'CMO, TechNova'
     },

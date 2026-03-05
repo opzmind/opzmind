@@ -16,7 +16,7 @@ export class SeoService {
         this.meta.updateTag({ property: 'og:title', content: titleStr });
         this.meta.updateTag({ property: 'og:description', content: desc });
         this.meta.updateTag({ property: 'og:type', content: 'website' });
-        this.meta.updateTag({ property: 'og:url', content: 'https://codexbyte.com' });
+        this.meta.updateTag({ property: 'og:url', content: 'https://opzmind.com' });
 
         // Twitter Card
         this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });

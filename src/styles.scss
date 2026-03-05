@@ -214,3 +214,49 @@ form .error-msg {
 .animate-fade-in {
   animation: fadeIn 0.8s ease forwards;
 }
+
+/* Custom opzmind Logo */
+.logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.75rem;
+  letter-spacing: -0.5px;
+}
+
+.logo-circle {
+  position: absolute;
+  left: -0.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.4rem;
+  height: 3.2rem;
+  background-color: var(--primary-yellow);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.logo-text-opz {
+  color: black !important;
+  position: relative;
+  z-index: 1;
+  margin-left: 0.1rem;
+}
+
+.logo-text-mind {
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+}
+
+.logo-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  background-color: var(--primary-yellow);
+  border-radius: 50%;
+  margin-left: 0.15rem;
+  align-self: flex-end;
+  margin-bottom: 0.4rem;
+}

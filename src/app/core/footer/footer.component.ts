@@ -10,15 +10,20 @@ import { RouterModule } from '@angular/router';
     <footer class="footer">
       <div class="container footer-grid">
         <div class="footer-col brand-col">
-          <a routerLink="/" class="logo">
-            <span class="gradient-text">CodexByte</span>
+          <a routerLink="/" class="logo" aria-label="opzmind">
+            <div class="logo-wrapper">
+              <div class="logo-circle"></div>
+              <span class="logo-text-opz">opz</span>
+              <span class="logo-text-mind">mind</span>
+              <div class="logo-dot"></div>
+            </div>
           </a>
           <p class="company-desc">Transforming Ideas into Digital Excellence. We build modern, scalable web and mobile solutions for forward-thinking businesses.</p>
           <div class="social-links">
             <a href="#" aria-label="LinkedIn">in</a>
             <a href="#" aria-label="Twitter">tw</a>
             <a href="#" aria-label="Facebook">fb</a>
-            <a href="#" aria-label="Instagram">ig</a>
+            <a href="https://www.instagram.com/opzmind._?igsh=enNyM3U1Y2JleHB6" target="_blank" aria-label="Instagram">ig</a>
           </div>
         </div>
         
@@ -45,15 +50,32 @@ import { RouterModule } from '@angular/router';
         <div class="footer-col">
           <h3>Contact Us</h3>
           <ul class="contact-info">
-            <li>📧 hello&#64;codexbyte.com</li>
-            <li>📞 +1 (555) 123-4567</li>
-            <li>📍 123 Tech Valley, CA 94043</li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-svg">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>opzmind&#64;gmail.com</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-svg">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>6381367917</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-svg">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>chennai, india</span>
+            </li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2026 CodexByte. All rights reserved.</p>
+        <p>&copy; 2026 opzmind. All rights reserved.</p>
       </div>
     </footer>
   `,
@@ -159,13 +181,19 @@ import { RouterModule } from '@angular/router';
     .contact-info {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 1rem;
     }
     
     .contact-info li {
       color: var(--text-secondary);
       display: flex;
-      gap: 0.5rem;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .contact-svg {
+      flex-shrink: 0;
+      color: var(--primary-yellow);
     }
     
     .footer-bottom {

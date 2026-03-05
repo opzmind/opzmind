@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
             </div>
             
             <p class="about-desc">
-              CodexByte is a premier digital agency specializing in modern web development and UI/UX design. We empower forward-thinking companies by building scalable, high-performance applications that drive massive growth.
+              opzmind is your dedicated digital growth partner. We specialize in building a powerful online presence through complete website development, local SEO strategies, SaaS solutions, and comprehensive digital packages designed to elevate your business.
             </p>
             
             <div class="mission-vision">
@@ -26,7 +26,7 @@ import { CommonModule } from '@angular/common';
                 </div>
                 <div>
                   <h3>Our Mission</h3>
-                  <p>To deliver innovative software solutions that transform ideas into profitable digital realities for our clients worldwide.</p>
+                  <p>To empower small businesses and professionals with accessible, high-performing digital strategies that drive real-world visibility and sustainable growth.</p>
                 </div>
               </div>
               
@@ -36,7 +36,7 @@ import { CommonModule } from '@angular/common';
                 </div>
                 <div>
                   <h3>Our Vision</h3>
-                  <p>To become the global leader in Angular and modern web technologies, setting the gold standard for digital excellence.</p>
+                  <p>To become the most trusted digital partner for businesses, offering an all-in-one ecosystem for lasting online success.</p>
                 </div>
               </div>
             </div>
@@ -48,26 +48,26 @@ import { CommonModule } from '@angular/common';
               
               <div class="feature-item glass-card">
                 <div class="feature-icon text-gradient">🚀</div>
-                <h4>Fast Performance</h4>
-                <p>We optimize every byte ensuring lighting-fast load times.</p>
+                <h4>Increased Visibility</h4>
+                <p>Gain local traction with our proven optimization and digital presence strategies.</p>
               </div>
               
               <div class="feature-item glass-card">
-                <div class="feature-icon text-gradient">🛡️</div>
-                <h4>High Security</h4>
-                <p>Enterprise-grade security practices implemented by default.</p>
+                <div class="feature-icon text-gradient">🛠️</div>
+                <h4>Custom Solutions</h4>
+                <p>From modern SaaS tools to personalized portfolios, we build exactly what you need.</p>
               </div>
               
               <div class="feature-item glass-card">
                 <div class="feature-icon text-gradient">💻</div>
                 <h4>Modern Tech</h4>
-                <p>We utilize Angular 17+ and modern SCSS modular architecture.</p>
+                <p>We craft lightning-fast web experiences ensuring smooth performance on all devices.</p>
               </div>
               
               <div class="feature-item glass-card">
                 <div class="feature-icon text-gradient">🎧</div>
-                <h4>24/7 Support</h4>
-                <p>Dedicated maintenance and priority support for all clients.</p>
+                <h4>Ongoing Support</h4>
+                <p>Reliable maintenance and dedicated support to keep your operations running flawlessly.</p>
               </div>
               
             </div>

@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
             <div class="service-icon" [innerHTML]="service.icon"></div>
             <h3>{{ service.title }}</h3>
             <p>{{ service.description }}</p>
-            <a href="#contact" class="service-link">Learn More <span>→</span></a>
+            <a href="#contact" class="service-link">View Details <span>→</span></a>
           </div>
         </div>
       </div>
@@ -127,33 +127,33 @@ export class ServicesComponent {
   services = [
     {
       icon: '💻',
-      title: 'Web Development',
+      title: 'Website Development Service',
       description: 'Custom, responsive websites built with modern technologies ensuring fast load times and optimal user experiences.'
     },
     {
-      icon: '🅰️',
-      title: 'Angular Development',
-      description: 'Enterprise-grade single-page applications using Angular 17+ with robust architecture and state management.'
+      icon: '🗺️',
+      title: 'Google Maps Business Optimization',
+      description: 'Maximize your local visibility with expert Google Business Profile optimization and map rankings.'
     },
     {
-      icon: '🎨',
-      title: 'UI/UX Design',
-      description: 'Stunning interfaces engineered with user-centric design principles, wireframing, and interactive prototyping.'
+      icon: '☁️',
+      title: 'SaaS for Small Businesses',
+      description: 'Cloud-based software solutions tailored for small businesses to streamline operations and scale efficiently.'
     },
     {
-      icon: '🔌',
-      title: 'API Integration',
-      description: 'Seamless integration with third-party APIs and custom RESTful or GraphQL backend services.'
+      icon: '📄',
+      title: 'Resume & Portfolio Website Service',
+      description: 'Professional personal branding websites combining modern design with interactive elements to showcase your expertise.'
     },
     {
-      icon: '🛒',
-      title: 'E-commerce Solutions',
-      description: 'Scalable and secure online stores with optimized checkout flows and payment gateway integrations.'
+      icon: '🏪',
+      title: 'Local Business Digital Package',
+      description: 'An all-in-one digital presence package including web design, local SEO, and essential business tools.'
     },
     {
-      icon: '🔍',
-      title: 'SEO Optimization',
-      description: 'Technical SEO, performance tuning, and structural optimizations to rank higher on search engines.'
+      icon: '🛠️',
+      title: 'Website Maintenance Service',
+      description: 'Ongoing technical support, security updates, and performance monitoring to keep your website running flawlessly.'
     }
   ];
 }

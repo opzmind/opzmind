@@ -48,8 +48,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.seoService.updateSeo(
-      'CodexByte | Digital Excellence',
-      'CodexByte is a premier digital agency specializing in modern web development, Angular applications, and stunning UI/UX design.'
+      'opzmind | Digital Excellence',
+      'opzmind is a premier digital agency specializing in modern web development, local SEO, SaaS solutions, and stunning UI/UX design.'
     );
 
     setTimeout(() => {

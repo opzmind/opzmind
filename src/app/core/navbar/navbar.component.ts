@@ -10,8 +10,13 @@ import { ThemeService } from '../theme/theme.service';
   template: `
     <nav [class.scrolled]="isScrolled" class="navbar">
       <div class="container nav-container">
-        <a routerLink="/" class="logo">
-          <span class="gradient-text">CodexByte</span>
+        <a routerLink="/" class="logo" aria-label="opzmind">
+          <div class="logo-wrapper">
+            <div class="logo-circle"></div>
+            <span class="logo-text-opz">opz</span>
+            <span class="logo-text-mind">mind</span>
+            <div class="logo-dot"></div>
+          </div>
         </a>
 
         <div class="nav-links" [class.active]="isMobileMenuOpen">
