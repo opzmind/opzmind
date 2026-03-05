@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { SERVICES_DATA } from '../../core/data/services.data';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   template: `
     <section id="services" class="services section-padding">
       <div class="container">
@@ -18,8 +20,8 @@ import { CommonModule } from '@angular/common';
           <div class="service-card glass-card" *ngFor="let service of services">
             <div class="service-icon" [innerHTML]="service.icon"></div>
             <h3>{{ service.title }}</h3>
-            <p>{{ service.description }}</p>
-            <a href="#contact" class="service-link">View Details <span>→</span></a>
+            <p>{{ service.shortDescription }}</p>
+            <a [routerLink]="['/service', service.id]" fragment="top" class="service-link">View Details <span>→</span></a>
           </div>
         </div>
       </div>
@@ -124,36 +126,5 @@ import { CommonModule } from '@angular/common';
   `]
 })
 export class ServicesComponent {
-  services = [
-    {
-      icon: '💻',
-      title: 'Website Development Service',
-      description: 'Custom, responsive websites built with modern technologies ensuring fast load times and optimal user experiences.'
-    },
-    {
-      icon: '🗺️',
-      title: 'Google Maps Business Optimization',
-      description: 'Maximize your local visibility with expert Google Business Profile optimization and map rankings.'
-    },
-    {
-      icon: '☁️',
-      title: 'SaaS for Small Businesses',
-      description: 'Cloud-based software solutions tailored for small businesses to streamline operations and scale efficiently.'
-    },
-    {
-      icon: '📄',
-      title: 'Resume & Portfolio Website Service',
-      description: 'Professional personal branding websites combining modern design with interactive elements to showcase your expertise.'
-    },
-    {
-      icon: '🏪',
-      title: 'Local Business Digital Package',
-      description: 'An all-in-one digital presence package including web design, local SEO, and essential business tools.'
-    },
-    {
-      icon: '🛠️',
-      title: 'Website Maintenance Service',
-      description: 'Ongoing technical support, security updates, and performance monitoring to keep your website running flawlessly.'
-    }
-  ];
+  services = SERVICES_DATA;
 }
