@@ -34,7 +34,7 @@ import { CommonModule } from '@angular/common';
           
           <div class="hero-stats animate-fade-in" style="animation-delay: 0.5s">
             <div class="stat-item">
-              <h3 class="stat-value">50+</h3>
+              <h3 class="stat-value">15+</h3>
               <p class="stat-label">Projects Delivered</p>
             </div>
             <div class="stat-item">

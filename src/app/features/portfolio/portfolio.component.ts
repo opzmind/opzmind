@@ -28,14 +28,22 @@ import { CommonModule } from '@angular/common';
         <div class="portfolio-grid mt-5">
           <div class="portfolio-item glass-card" *ngFor="let project of filteredProjects()">
             <div class="portfolio-img">
-              <div class="placeholder-img">{{ project.title[0] }}</div>
+              <img *ngIf="project.image" [src]="project.image" [alt]="project.title" class="project-thumbnail" />
+              <div *ngIf="!project.image" class="placeholder-img">{{ project.title[0] }}</div>
+              
               <div class="portfolio-overlay">
-                <a href="#" class="view-btn">View Project</a>
+                <!-- If we have a link, open it in a new tab -->
+                <a *ngIf="project.link" [href]="project.link" target="_blank" rel="noopener noreferrer" class="view-btn">View Website</a>
+                <!-- Otherwise use the old fallback href -->
+                <a *ngIf="!project.link" href="#" class="view-btn">View Project</a>
               </div>
             </div>
-            <div class="portfolio-content">
+            <div class="portfolio-content" [class.linked]="project.link">
               <span class="category-tag">{{ project.category }}</span>
-              <h3>{{ project.title }}</h3>
+              <h3 *ngIf="!project.link">{{ project.title }}</h3>
+              <h3 *ngIf="project.link">
+                 <a [href]="project.link" target="_blank" rel="noopener noreferrer" class="title-link">{{ project.title }} ↗</a>
+              </h3>
             </div>
           </div>
         </div>
@@ -121,6 +129,18 @@ import { CommonModule } from '@angular/common';
       overflow: hidden;
     }
     
+    .project-thumbnail {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: transform var(--transition-slow);
+    }
+    
+    .portfolio-item:hover .project-thumbnail {
+      transform: scale(1.05);
+    }
+    
     .placeholder-img {
       width: 100%;
       height: 100%;
@@ -187,20 +207,49 @@ import { CommonModule } from '@angular/common';
       font-size: 1.25rem;
       margin-bottom: 0;
     }
+    
+    .title-link {
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+      display: inline-block;
+    }
+    
+    .title-link:hover {
+      color: var(--primary-yellow);
+    }
   `]
 })
 export class PortfolioComponent {
-  categories = ['All', 'Web App', 'E-commerce', 'UI/UX'];
+  categories = ['All', 'Restaurant', 'E-commerce', 'Gym'];
 
   activeCategory = signal('All');
 
   projects = signal([
-    { title: 'FinTech Dashboard', category: 'Web App' },
-    { title: 'Nexus E-Shop', category: 'E-commerce' },
-    { title: 'HealthCare Portal UI', category: 'UI/UX' },
-    { title: 'Crypto Exchange Platform', category: 'Web App' },
-    { title: 'Fashion Retailer Store', category: 'E-commerce' },
-    { title: 'AI Analytics Tool', category: 'Web App' }
+    {
+      title: 'Gup & Shup',
+      category: 'Restaurant',
+      image: 'assets/images/portfolio/gupAndshup.png',
+      link: 'https://www.gupandshup.com/'
+    },
+    {
+      title: 'Ribambelle',
+      category: 'Restaurant',
+      image: 'assets/images/portfolio/ribambelle.png',
+      link: 'https://ribambelle.ae/'
+    },
+    {
+      title: 'ASOS',
+      category: 'E-commerce',
+      image: 'assets/images/portfolio/asos.png',
+      link: 'https://www.asos.com/women/'
+    },
+    {
+      title: 'Anytime Fitness',
+      category: 'Gym',
+      image: 'assets/images/portfolio/anytimefitness.png',
+      link: 'https://www.anytimefitness.co.in/'
+    },
   ]);
 
   filteredProjects = computed(() => {

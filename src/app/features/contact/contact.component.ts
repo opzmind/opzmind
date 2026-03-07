@@ -54,7 +54,7 @@ import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
               </span>
               <div>
                 <h4>Email Address</h4>
-                <p>opzmind&#64;gmail.com</p>
+                <p>info&#64;opzmind.com</p>
               </div>
             </div>
             

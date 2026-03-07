@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <!-- The yellow circle -->
+    <circle id="yellow-circle" cx="170" cy="256" r="140" />
+    <clipPath id="circle-clip">
+      <use href="#yellow-circle" />
+    </clipPath>
+    <!-- Web Font for closer match -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;display=swap');
+      .logo-text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 110px;
+        letter-spacing: -2px;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="#000000" />
+
+  <!-- The Yellow Circle -->
+  <use href="#yellow-circle" fill="#FFD700" />
+
+  <!-- Base Text (White) shown on the black background -->
+  <g class="logo-text">
+    <text x="100" y="295" fill="#FFFFFF">opzmīnd<tspan fill="#FFD700">.</tspan></text>
+  </g>
+
+  <!-- Overlay Text (Black) clipped inside the yellow circle -->
+  <g clip-path="url(#circle-clip)" class="logo-text">
+    <text x="100" y="295" fill="#000000">opzmīnd<tspan fill="#000000">.</tspan></text>
+  </g>
+</svg>
